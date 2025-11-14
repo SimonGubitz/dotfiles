@@ -1,1 +1,1 @@
-`stow kitty nvim`
+`stow {list_configs}`
