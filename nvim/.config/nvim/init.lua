@@ -105,6 +105,9 @@ vim.o.relativenumber = true
 -- Disable wrapping lines to another row
 vim.o.wrap = false
 
+-- Persist folds across sessions
+vim.o.viewoptions = 'folds,cursor'
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
 
@@ -349,6 +352,14 @@ require('lazy').setup({
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
+    },
+  },
+
+  {
+    'folke/persistence.nvim',
+    event = 'BufReadPre',
+    opts = {
+      options = { 'folds' },
     },
   },
 
