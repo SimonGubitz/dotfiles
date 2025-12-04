@@ -105,6 +105,13 @@ vim.o.relativenumber = true
 -- Disable wrapping lines to another row
 vim.o.wrap = false
 
+-- Indentation
+local indentation_level = 2
+vim.o.tabstop = indentation_level
+vim.o.shiftwidth = indentation_level
+vim.o.softtabstop = indentation_level
+vim.o.autoindent = true
+
 -- Persist folds across sessions
 vim.o.viewoptions = 'folds,cursor'
 
