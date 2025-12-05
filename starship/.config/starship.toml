@@ -150,7 +150,7 @@ disabled = false
 [directory]
 format = '[ ](fg:cyan bold bg:#252525)[$read_only]($read_only_style)[$repo_root]($repo_root_style)[$path ]($style)'
 style = 'fg:cyan bold bg:#252525'
-home_symbol = ' ~'
+home_symbol = ' '
 read_only = ' ' # ' ' # ' ''
 read_only_style = 'fg:cyan bg:#252525'
 truncation_length = 3
