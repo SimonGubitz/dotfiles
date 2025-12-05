@@ -161,6 +161,13 @@ repo_root_style	= 'fg:cyan bold bg:#252525'
 use_os_path_sep = true
 disabled = false
 
+[directory.substitutions]
+"Dev" = " "
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
 [direnv]
 symbol = 'direnv'
 style = 'fg:#505050 bold bg:#252525'
