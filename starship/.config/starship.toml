@@ -167,6 +167,7 @@ disabled = false
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
+"Movies" = "  "
 
 [direnv]
 symbol = 'direnv'
@@ -193,7 +194,7 @@ pyenv_version_name = true
 [git_branch]
 format = '[❯ $symbol $branch(:$remote_branch)]($style)[ ](bg:#252525)'
 style = 'fg:#E04D27 bg:#252525'
-symbol = ''
+symbol = ' '
 #ignore_branches = ['master', 'main']
 
 [git_commit]
