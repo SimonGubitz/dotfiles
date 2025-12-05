@@ -1,0 +1,31 @@
+### Text Theming
+
+	text-color = #fff
+	placeholder-color = #757575
+
+
+
+### Text Layout
+	
+	prompt-text = "search icon here"
+	prompt-padding = 10
+	placeholder-text = "search"
+
+
+### Window theming
+	width = 1280
+	height = 720
+
+
+	background-color = #131313aa
+
+	outline-width = 0
+	outline-color = #000000
+
+	border-width = 1
+	border-color = #757575
+	corner-radius = 35
+
+
+	scale = true
+
