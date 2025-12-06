@@ -7,7 +7,7 @@
 
 ### Text Layout
 	
-	prompt-text = "search icon here"
+	prompt-text = " "
 	prompt-padding = 10
 	placeholder-text = "search"
 
