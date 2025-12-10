@@ -9,7 +9,7 @@
 	
 	prompt-text = " "
 	prompt-padding = 10
-	placeholder-text = "search"
+	placeholder-text = "Search"
 
 
 ### Window theming
