@@ -137,16 +137,16 @@ symbol = ' ' # ' ❯ '
 disabled = false
 
 [directory]
-format = '[ ](fg:cyan bold bg:#252525)[$read_only]($read_only_style)[$repo_root]($repo_root_style)[$path ]($style)'
-style = 'fg:cyan bold bg:#252525'
+format = '[ ](fg:#6de35d bold bg:#252525)[$read_only]($read_only_style)[$repo_root]($repo_root_style)[$path ]($style)'
+style = 'fg:#6de35d bold bg:#252525'
 home_symbol = ' '
 read_only = ' ' # ' ' # ' ''
-read_only_style = 'fg:cyan bg:#252525'
+read_only_style = 'fg:#6de35d bg:#252525'
 truncation_length = 3
 truncation_symbol = '…/'
 truncate_to_repo = true
-repo_root_format = '[ ](fg:cyan bold bg:#252525)[$read_only]($read_only_style)[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path ]($style)'
-repo_root_style	= 'fg:cyan bold bg:#252525'
+repo_root_format = '[ ](fg:#6de35d bold bg:#252525)[$read_only]($read_only_style)[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path ]($style)'
+repo_root_style	= 'fg:#6de35d bold bg:#252525'
 use_os_path_sep = true
 disabled = false
 
