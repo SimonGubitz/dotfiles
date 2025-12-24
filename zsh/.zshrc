@@ -1,13 +1,16 @@
 eval "$(starship init zsh)"
 
-
-if uwsm check may-start && uwsm select; then
-	exec uwsm start default
+# So that it doesnt run on Mac
+os_name=$(uname -s)
+if [ os_name = "Linux" ]; then
+	if uwsm check may-start && uwsm select; then
+		exec uwsm start default
+	fi
 fi
 
 
-# Run Neofetch once on startup
-neofetch
+# Run Fastfetch once on startup
+fastfetch -c examples/10
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
