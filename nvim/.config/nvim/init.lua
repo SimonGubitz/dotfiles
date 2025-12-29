@@ -129,6 +129,8 @@ vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
 
+-- vim.g.clipboard = 'wl-copy'
+
 -- Enable break indent
 vim.o.breakindent = true
 
