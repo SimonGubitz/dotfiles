@@ -10,7 +10,7 @@ fi
 
 
 # Run Fastfetch once on startup
-fastfetch -c examples/10 --logo ArchCraft
+fastfetch -c examples/10
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
