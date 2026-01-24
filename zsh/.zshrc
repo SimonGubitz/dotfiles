@@ -10,7 +10,9 @@ fi
 
 
 # Run Fastfetch once on startup
-fastfetch -c examples/10
+if [ -z "$TMUX" ]; then
+	fastfetch -c examples/10;
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
