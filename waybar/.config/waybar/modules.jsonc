@@ -24,6 +24,7 @@
 	// Weather
 	"custom/weather": {
 		"exec": "env $(cat ~/.config/waybar/scripts/.env|xargs) ~/.config/waybar/scripts/openweathermap.sh",
+		"on-click": "env $(cat ~/.config/waybar/scripts/.env|xargs) helium-browser https://openweathermap.org/city/$CITY_CODE",
 		"interval": 1800,
 		"format": "{}",
 		"tooltip": false
