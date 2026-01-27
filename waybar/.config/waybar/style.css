@@ -264,6 +264,14 @@ tooltip label {
 	border-radius: 12px;
 }
 
+#custom-docker {
+	background: @background-primary;
+	color: @white;
+	font-size: 19px;
+	font-weight: bold;
+	margin: 6px;
+}
+
 #custom-weather {
 	background: @background-primary;
 	color: @white;
