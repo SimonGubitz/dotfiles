@@ -21,6 +21,14 @@
 		}
 	},
 
+	"custom/docker": {
+		"exec": "~/.config/waybar/scripts/docker.sh",
+		"interval": 1800,
+		"hide-empty-text": true,
+		"format": "{}",
+		"on-click": "kitty ctop"
+	},
+
 	// Weather
 	"custom/weather": {
 		"exec": "env $(cat ~/.config/waybar/scripts/.env|xargs) ~/.config/waybar/scripts/openweathermap.sh",
