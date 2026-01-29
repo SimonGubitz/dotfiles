@@ -24,7 +24,7 @@
 }
 
 window#waybar {
-	background: rgba(15, 15, 20, 0.3);
+	background: rgba(15, 15, 20, 0.1);
 }
 
 /* -----------------------------------------------------------------------------
@@ -220,7 +220,6 @@ tooltip label {
 
 #network.disconnected {
 	color: @error;
-	border-left: 4px solid @error;
 }
 
 #network.disabled {
