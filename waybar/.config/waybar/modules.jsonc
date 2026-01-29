@@ -2,7 +2,7 @@
 	// Launcher
 	"custom/launcher": {
 		"format": "",
-		"on-click": "tofi -show drun | xargs -g",
+		"on-click": "tofi-drun | xargs -r hyprctl dispatch exec",
 		"tooltip": false
 	},
 
