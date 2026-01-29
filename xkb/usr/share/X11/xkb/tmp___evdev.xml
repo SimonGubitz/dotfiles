@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+
+<xkbConfigRegistry version="1.1">
+	<layoutList>
+
+		<layout>
+			<configItem>
+				<name>ISO-DE MacOS Symbols</name>
+				<shortDescription>Remaps @, [], {}, ~ and other symbols to the ISO-DE MacOS bindings.</shortDescription>
+				<countryList>
+					<iso3166Id>DE</iso3166Id>
+				</countryList>
+				<languageList>
+					<iso629Id>deu</iso629Id>
+				</languageList>
+			</configItem>
+		</layout>
+	</layoutList>
+</xkbConfigRegistry>
