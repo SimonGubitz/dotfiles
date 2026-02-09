@@ -1,8 +1,17 @@
 eval "$(starship init zsh)"
 
+
+# Exports
+export XDG_CONFIG_HOME="$HOME/.config"
+export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
+
+# Aliases
+alias ls="eza --long --header --inode --git"
+
+
 # So that it doesnt run on Mac
 os_name=$(uname -s)
-if [ os_name = "Linux" ]; then
+if [ "$os_name" = "Linux" ]; then
 	if uwsm check may-start && uwsm select; then
 		exec uwsm start default
 	fi
