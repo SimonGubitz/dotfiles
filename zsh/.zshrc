@@ -6,7 +6,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
 
 # Aliases
-alias ls="eza --long --header --inode --git"
+alias ls="eza --icons --oneline"
+alias lsa="eza --long --header --inode --git"
 
 
 # So that it doesnt run on Mac
