@@ -7,19 +7,10 @@ export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
 
 # Aliases
 alias ls="eza --icons --oneline"
-alias lsa="eza --long --header --inode --git"
+alias lsa="eza --long --header --inode --git -a"
 alias lst="eza --icons --oneline --tree -a"
 
 alias spotify="spotify_player"
-
-
-# So that it doesnt run on Mac
-os_name=$(uname -s)
-if [ "$os_name" = "Linux" ]; then
-	if uwsm check may-start && uwsm select; then
-		exec uwsm start default
-	fi
-fi
 
 
 # Run Fastfetch once on startup
