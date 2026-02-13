@@ -11,15 +11,6 @@ alias lsa="eza --long --header --inode --git"
 alias lst="eza --icons --oneline --tree -a"
 
 
-# So that it doesnt run on Mac
-os_name=$(uname -s)
-if [ "$os_name" = "Linux" ]; then
-	if uwsm check may-start && uwsm select; then
-		exec uwsm start default
-	fi
-fi
-
-
 # Run Fastfetch once on startup
 if [ -z "$TMUX" ]; then
 	fastfetch -c examples/10;
