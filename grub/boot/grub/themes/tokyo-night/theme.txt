@@ -6,7 +6,7 @@ title-text: ""
 desktop-image: "background.png"
 desktop-image-scale-method: "stretch"
 desktop-color: "#1A1B26"
-terminal-font: "JetBrains Mono Regular 10"
+terminal-font: "JetBrains Mono Regular 8"
 terminal-left: "0"
 terminal-top: "0"
 terminal-width: "100%"
@@ -16,17 +16,17 @@ terminal-border: "0"
 # Logo image
 + image {
 	left = 50%-50
-	top = 50%-45
+	top = 45%-60
 	file = "logo.png"
 }
 
 # Show the boot menu
 + boot_menu {
-	left = 50%-140
-	top = 60%
-	width = 280
+	left = 50%-150
+	top = 50%
+	width = 300
 	height = 30%
-	item_font = "JetBrains Mono Regular 10"
+	item_font = "JetBrains Mono Regular 8"
 	item_color = "#FBFBFB"
 	selected_item_color = "#FBFBFB"
 	item_height = 32
