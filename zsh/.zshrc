@@ -10,6 +10,8 @@ alias ls="eza --icons --oneline"
 alias lsa="eza --long --header --inode --git"
 alias lst="eza --icons --oneline --tree -a"
 
+alias spotify="spotify_player"
+
 
 # So that it doesnt run on Mac
 os_name=$(uname -s)
