@@ -197,7 +197,7 @@ disabled = false
 format = '[\[+$added/]($added_style)[-$deleted\]]($deleted_style)[ ](bg:#252525)'
 added_style = 'fg:#E04D27 bg:#252525'
 deleted_style = 'fg:#E04D27 bg:#252525'
-disabled = false
+disabled = true
 
 [git_status]
 format = '([$all_status$ahead_behind]($style))'
@@ -238,13 +238,13 @@ format = "[ \ueab5 ](fg:purple bold bg:#252525)[$symbol ${ram} ${swap}]($style)"
 style = 'fg:purple bg:#252525'
 symbol = '﬙ 北' # '﬙ 痢' # '﬙ / 󰾵' # '󰍛 󰾵' # '﬙ 󰾴' # '﬙ 󰾶' # '﬙ 󰾷' '﬙ 󰣂'
 threshold = 75
-disabled = false
+disabled = true
 
 [cmd_duration]
 format = "[ \ueab5 \uf017 $duration]($style)" # \ueab5 \uf017   
 style = 'fg:yellow bg:#252525'
 min_time = 500
-disabled = false
+disabled = true
 
 [battery]
 format = "[ \ueab5 $symbol$percentage]($style)"
