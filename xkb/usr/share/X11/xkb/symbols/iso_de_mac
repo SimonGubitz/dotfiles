@@ -3,15 +3,14 @@ partial alphanumeric_keys
 xkb_symbols "iso_de_mac" {
 
 	include "de(basic)"
-	include "level3(ralt_switch)"
+	include "level3(lalt_switch)"
 
-	key <AB06> { [ n, N, asciitilde ] };
-	key <AC09> { [ l, L, at ] };
+	key <AB06> { [ n, N, asciitilde, NoSymbol ] };
+	key <AC09> { [ l, L, at, NoSymbol ] };
 
-	key <AE05> { [ 5, percent ] };
-	key <AE06> { [ 6, ampersand ] };
+	key <AE05> { [ 5, percent, bracketleft, NoSymbol ] };
+	key <AE06> { [ 6, ampersand, bracketright, NoSymbol ] };
 	key <AE07> { [ 7, slash, bar, backslash ] };
-	key <AE08> { [ 8, parenleft, bracketleft ] };
-	key <AE09> { [ 9, parenright, bracketright ] };
-
+	key <AE08> { [ 8, parenleft, braceleft, NoSymbol ] };
+	key <AE09> { [ 9, parenright, braceright, NoSymbol ] };
 };
