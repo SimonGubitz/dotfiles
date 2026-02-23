@@ -1,4 +1,8 @@
+#!/bin/bash
+
 eval "$(starship init zsh)"
+
+
 
 # zsh initialization
 autoload -Uz compinit && compinit -C
@@ -7,6 +11,23 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 setopt EXTENDED_GLOB
 bindkey -v
 bindkey '\M-e' autosuggest-accept
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+bindkey -M vicmd k up-line-or-beginning-search
+bindkey -M vicmd j down-line-or-beginning-search
+
+function zle-keymap-select {
+  if [[ $KEYMAP == vicmd ]]; then
+    echo -ne '\e[1 q'
+  else
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
 
 # Aliases
 alias ls="eza --icons --oneline"
