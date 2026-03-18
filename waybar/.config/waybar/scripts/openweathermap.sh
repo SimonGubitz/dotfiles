@@ -18,7 +18,7 @@ check_api_key() {
 get_icon() {
     local condition=$1
     local is_day=$2
-    
+
     case $condition in
         "Clear")
             if [ "$is_day" = "true" ]; then
