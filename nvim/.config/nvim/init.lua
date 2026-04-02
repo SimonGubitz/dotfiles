@@ -307,6 +307,7 @@ require('lazy').setup({
     opts = {
       formatters_by_ft = {
         xml = { 'xmlformatter' },
+        json = { 'biome' },
       },
       format_on_save = {
         timeout_ms = 200,
@@ -689,6 +690,7 @@ require('lazy').setup({
       local servers = {
         clangd = {},
         gopls = {},
+        biome = {},
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -964,7 +966,7 @@ require('lazy').setup({
     --
     main = 'nvim-treesitter.configs',
     opts = {
-      ensure_installed = { 'bash', 'c', 'cpp', 'diff', 'go', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'cpp', 'diff', 'go', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'json' },
       auto_install = true,
       highlight = {
         enable = true,
