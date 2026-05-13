@@ -1,0 +1,6 @@
+require("configs.autostart")
+require("configs.bindings")
+require("configs.envs")
+require("configs.input")
+require("configs.looknfeel")
+require("configs.monitors")
