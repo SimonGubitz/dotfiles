@@ -307,7 +307,7 @@ require('lazy').setup({
     opts = {
       formatters_by_ft = {
         xml = { 'xmlformatter' },
-        json = { 'biome' },
+        json = { 'clang-format' },
       },
       format_on_save = {
         timeout_ms = 200,

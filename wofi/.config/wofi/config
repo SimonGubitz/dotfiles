@@ -1,0 +1,3 @@
+style = style.css
+matching = fuzzy
+close_on_focus_loss = true

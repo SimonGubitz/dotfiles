@@ -8,7 +8,8 @@ hl.bind(mainMod .. " + tab", hl.dsp.window.cycle_next())
 hl.bind(mainMod .. " + SHIFT + tab", hl.dsp.window.cycle_next({ next = prev }))
 
 -- Spotlight
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_raw("tofi-drun | xargs -r hyprctl eval 'hl.dsp.exec( - )'"))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_raw("wofi --show drun"))
+hl.bind("CTRL + " .. mainMod .. " + SPACE", hl.dsp.exec_raw("wofi --show run"))
 
 -- Window Movement / Sizing
 hl.bind("CTRL + " .. mainMod .. " + F", hl.dsp.window.fullscreen({

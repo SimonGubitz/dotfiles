@@ -32,5 +32,10 @@ hl.config({
 	dwindle = {
 		force_split = 2, -- split to the right
 		preserve_split = true,
+		split_width_multiplier = 1.6,
+	},
+
+	cursor = {
+		hide_on_key_press = true,
 	},
 })
