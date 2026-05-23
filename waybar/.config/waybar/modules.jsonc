@@ -23,7 +23,7 @@
 
 	"custom/docker": {
 		"exec": "~/.config/waybar/scripts/docker.sh",
-		"interval": 1800,
+		"interval": 5,
 		"hide-empty-text": true,
 		"format": "{}",
 		"on-click": "kitty ctop"
