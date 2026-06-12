@@ -1,8 +1,10 @@
 if [[ "$OSTYPE" == darwin* ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export PATH="$PATH:$HOME/.lmstudio/bin"
+	export XDG_CACHE_HOME="$HOME/Library/Caches/"
 else
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+	export XDG_CACHE_HOME="$HOME/.cache"
 fi
 
 # Exports
