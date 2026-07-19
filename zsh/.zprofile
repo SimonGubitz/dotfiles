@@ -8,9 +8,11 @@ else
 fi
 
 # Exports
+export PATH="$PATH:$(go env GOPATH)/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
 export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
 export NVM_DIR="$HOME/.nvm"
+export HOMEBREW_NO_ENV_HINTS=1
 
 # Setting PATH for Python 3.13
 # The original version is saved in .zprofile.pysave
