@@ -113,15 +113,9 @@ vim.diagnostic.config {
 
 local capabilities = require('blink.cmp').get_lsp_capabilities()
 
-local navic = require 'nvim-navic'
-local on_attach = function(client, bufnr)
-  -- if client.server_capabilities.documentSymbolProvider then
-  navic.attach(client, bufnr)
-  -- end
-end
 local servers = {
   clangd = {},
-  gopls = { on_attach = on_attach },
+  gopls = {},
   biome = {},
   ts_ls = {},
   lua_ls = {
@@ -138,6 +132,10 @@ local servers = {
   },
 }
 
+local on_attach = function(client, bufnr)
+  require('nvim-navic').attach(client, bufnr)
+end
+
 local ensure_installed = vim.tbl_keys(servers or {})
 require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -151,6 +149,7 @@ require('mason-lspconfig').setup {
       -- by the server configuration above. Useful when disabling
       -- certain features of an LSP (for example, turning off formatting for ts_ls)
       server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+      server.on_attach = on_attach
       require('lspconfig')[server_name].setup(server)
     end,
   },
