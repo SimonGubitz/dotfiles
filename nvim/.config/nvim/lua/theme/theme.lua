@@ -5,11 +5,11 @@ require('tokyonight').setup {}
 
 ---@type token.Config
 local tokenConfig = {
-	transparent = false,
-	plugins = {
-		gitsigns = true
-	}
+  transparent = false,
+  plugins = {
+    gitsigns = true,
+  },
 }
 require('token').setup(tokenConfig)
 
-vim.cmd.colorscheme('token-temper')
+vim.cmd.colorscheme(ConfigSettings.theme)

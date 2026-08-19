@@ -5,9 +5,13 @@ vim.g.maplocalleader = ' '
 vim.cmd "let g:netrw_list_hide = '.DS_STORE'"
 vim.cmd 'let g:netrw_hide = 1'
 
-require('configs.options')
-require('configs.keymaps')
-require('configs.autocmds')
-require('configs.plugins')
+ConfigSettings = {
+  theme = os.getenv 'THEME' or 'token-temper',
+}
 
-require('theme.theme')
+require 'configs.options'
+require 'configs.keymaps'
+require 'configs.autocmds'
+require 'configs.plugins'
+
+require 'theme.theme'
