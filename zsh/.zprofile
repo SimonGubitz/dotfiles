@@ -9,6 +9,7 @@ fi
 
 # Exports
 export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
 export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
 export NVM_DIR="$HOME/.nvm"
