@@ -1,7 +1,5 @@
 #!/bin/bash
 
-eval "$(starship init zsh)"
-
 # zsh initialization
 fpath=(/Users/simongubitz/.docker/completions $fpath)
 autoload -Uz compinit && compinit -C
@@ -47,4 +45,5 @@ done
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/prompt.zsh
 [[ -f ~/.zprofile ]] && source ~/.zprofile
