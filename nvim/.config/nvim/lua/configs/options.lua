@@ -7,11 +7,11 @@ vim.o.wrap = false
 
 -- Indentation
 local indentation_level = 2
-
 vim.o.tabstop = indentation_level
 vim.o.shiftwidth = indentation_level
 vim.o.softtabstop = indentation_level
 vim.o.autoindent = true
+vim.o.expandtab = true
 
 -- Persist folds across sessions
 vim.o.viewoptions = 'folds,cursor'
@@ -24,7 +24,7 @@ vim.o.showmode = false
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-	vim.o.clipboard = 'unnamedplus'
+  vim.o.clipboard = 'unnamedplus'
 end)
 
 -- Enable break indent
