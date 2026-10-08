@@ -1,5 +1,8 @@
+[init]
+  defaultBranch = main
+
 [core]
-editor = nvim
+  editor = nvim
 
 [push]
-autoSetupRemote = true
+  autoSetupRemote = true
