@@ -9,16 +9,19 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 
-
 ---@type vim.Option
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
-
 require('lazy').setup({
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
-  { 'nvim-treesitter/nvim-treesitter-context', },
-  { 'lewis6991/gitsigns.nvim',                 config = function() require 'plugins.gitsigns' end, },
+  { 'nvim-treesitter/nvim-treesitter-context' },
+  {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require 'plugins.gitsigns'
+    end,
+  },
 
   {
     'akinsho/toggleterm.nvim',
@@ -57,7 +60,7 @@ require('lazy').setup({
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
-      { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
+      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
     config = function()
       require 'plugins.nvim-telescope'
@@ -107,9 +110,6 @@ require('lazy').setup({
     opts = {
       notify_on_error = false,
       format_on_save = function(bufnr)
-        -- Disable "format_on_save lsp_fallback" for languages that don't
-        -- have a well standardized coding style. You can add additional
-        -- languages here or re-enable it for the disabled ones.
         local disable_filetypes = { c = true, cpp = true }
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
@@ -125,6 +125,7 @@ require('lazy').setup({
         xml = { 'xmlformatter' },
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
         json = { 'fixjson' },
+        nix = { 'nixpkgs-fmt' },
       },
     },
   },
@@ -154,45 +155,14 @@ require('lazy').setup({
     },
     opts = {
       keymap = {
-        -- 'default' (recommended) for mappings similar to built-in completions
-        --   <c-y> to accept ([y]es) the completion.
-        --    This will auto-import if your LSP supports it.
-        --    This will expand snippets if the LSP sent a snippet.
-        -- 'super-tab' for tab to accept
-        -- 'enter' for enter to accept
-        -- 'none' for no mappings
-        --
-        -- For an understanding of why the 'default' preset is recommended,
-        -- you will need to read `:help ins-completion`
-        --
-        -- No, but seriously. Please read `:help ins-completion`, it is really good!
-        --
-        -- All presets have the following mappings:
-        -- <tab>/<s-tab>: move to right/left of your snippet expansion
-        -- <c-space>: Open menu or open docs if already open
-        -- <c-n>/<c-p> or <up>/<down>: Select next/previous item
-        -- <c-e>: Hide menu
-        -- <c-k>: Toggle signature help
-        --
-        -- See :h blink-cmp-config-keymap for defining your own keymap
         preset = 'default',
-
-        -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
-        --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
       },
-
       appearance = {
-        -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-        -- Adjusts spacing to ensure icons are aligned
         nerd_font_variant = 'mono',
       },
-
       completion = {
-        -- By default, you may press `<c-space>` to show the documentation.
-        -- Optionally, set `auto_show = true` to show the documentation after a delay.
         documentation = { auto_show = false, auto_show_delay_ms = 500 },
       },
-
       sources = {
         default = { 'lsp', 'path', 'snippets', 'lazydev' },
         providers = {
@@ -201,17 +171,7 @@ require('lazy').setup({
       },
 
       snippets = { preset = 'luasnip' },
-
-      -- Blink.cmp includes an optional, recommended rust fuzzy matcher,
-      -- which automatically downloads a prebuilt binary when enabled.
-      --
-      -- By default, we use the Lua implementation instead, but you may enable
-      -- the rust implementation via `'prefer_rust_with_warning'`
-      --
-      -- See :h blink-cmp-config-fuzzy for more information
       fuzzy = { implementation = 'lua' },
-
-      -- Shows a signature help window while you type arguments for a function
       signature = { enabled = true },
     },
   },
@@ -222,13 +182,37 @@ require('lazy').setup({
     keys = { { '<leader>mp', '<cmd>Vellum<cr>', desc = 'Markdown Preview' } },
   },
 
+  {
+    'CoreyKaylor/diffbandit.nvim',
+    cmd = {
+      'DiffBandit',
+      'DiffBanditBuffers',
+      'DiffBanditFolderDiff',
+      'DiffBanditGit',
+      'DiffBanditGitCurrent',
+      'DiffBanditCommitPanel',
+      'DiffBanditGitMenu',
+      'DiffBanditGitLog',
+      'DiffBanditGitCommit',
+      'DiffBanditGitCompare',
+      'DiffBanditGitCheckout',
+      'DiffBanditMerge',
+    },
+    opts = {},
+  },
+
   -- ### Themes ###
-  { 'folke/tokyonight.nvim',    priority = 1000 },
-  { 'ThorstenRhau/token',       version = '*' },
+  { 'folke/tokyonight.nvim', priority = 1000 },
+  { 'ThorstenRhau/token', version = '*' },
 
   -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter',                             dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-  { 'echasnovski/mini.nvim',    config = function() require 'plugins.mini' end, },
+  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  {
+    'echasnovski/mini.nvim',
+    config = function()
+      require 'plugins.mini'
+    end,
+  },
 
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
@@ -239,7 +223,7 @@ require('lazy').setup({
     --
     main = 'nvim-treesitter.configs',
     opts = {
-      ensure_installed = { 'bash', 'c', 'cpp', 'diff', 'go', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'json' },
+      ensure_installed = { 'bash', 'c', 'cpp', 'diff', 'go', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'json', 'nix' },
       auto_install = true,
       highlight = {
         enable = true,
