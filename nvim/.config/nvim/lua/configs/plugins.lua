@@ -216,12 +216,9 @@ require('lazy').setup({
 
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
-    branch = 'master',
+    branch = 'main',
     lazy = false,
     build = ':TSUpdate',
-    -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
-    --
-    main = 'nvim-treesitter.configs',
     opts = {
       ensure_installed = { 'bash', 'c', 'cpp', 'diff', 'go', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'json', 'nix' },
       auto_install = true,
